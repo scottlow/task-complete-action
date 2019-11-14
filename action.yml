@@ -1,0 +1,9 @@
+name: 'Task Complete'
+description: 'Gate PRs until all tasks are complete'
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token of the repository'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
