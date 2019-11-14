@@ -8865,8 +8865,12 @@ try {
             // Iterate over each comment to find uncompleted tasks
             hasOpenTasks = comments.data.some(comment => {
                 let comment_body = comment.body;
+                console.log(comment_body);
+                console.log(comment_body.match(/(?:^|[\r\n])\s*(?:\*|\-|\d+\.) \[ \]\s+\S/));
                 return comment_body.match(/(?:^|[\r\n])\s*(?:\*|\-|\d+\.) \[ \]\s+\S/);
             });
+
+            console.log(hasOpenTasks);
 
             // Create a check
             let check = {
